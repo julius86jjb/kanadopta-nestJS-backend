@@ -10,7 +10,6 @@ import {
   ValidateNested,
   IsEnum,
 } from 'class-validator';
-import { Column } from 'typeorm';
 import { ValidRoles } from '../interfaces/valid-roles.interface';
 import { Type } from 'class-transformer';
 

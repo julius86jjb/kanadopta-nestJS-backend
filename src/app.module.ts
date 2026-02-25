@@ -4,14 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
-import { StoresModule } from './stores/stores.module';
 import { CommonModule } from './common/common.module';
-import { DepartmentsModule } from './departments/departments.module';
-import { CategoriesModule } from './categories/categories.module';
-import { ProductsModule } from './products/products.module';
-import { OrdersModule } from './orders/orders.module';
-import { QuestionsModule } from './questions/questions.module';
-import { ReviewsModule } from './reviews/reviews.module';
 import { SeedModule } from './seed/seed.module';
 import { FilesModule } from './files/files.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
@@ -36,14 +29,7 @@ import { AuthModule } from './users/auth/auth.module';
       synchronize: true, // en produccion no se usa
     }),
     UsersModule,
-    StoresModule,
     CommonModule,
-    DepartmentsModule,
-    CategoriesModule,
-    ProductsModule,
-    OrdersModule,
-    QuestionsModule,
-    ReviewsModule,
     SeedModule,
     FilesModule,
     CloudinaryModule,

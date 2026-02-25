@@ -1,8 +1,5 @@
 import { IsBoolean, IsString } from 'class-validator';
-import { Order } from 'src/orders/entities/order.entity';
-import { Question } from 'src/questions/entities/question.entity';
-import { Review } from 'src/reviews/entities/review.entity';
-import { Store } from 'src/stores/entities/store.entity';
+
 import {
   BeforeInsert,
   BeforeUpdate,
@@ -14,25 +11,15 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  PrimaryColumn
 } from 'typeorm';
 import { ValidRoles } from '../auth/interfaces/valid-roles.interface';
+import { v4 as uuidv4 } from 'uuid'
 
 @Entity({ name: 'users' })
 export class User {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryColumn('uuid') // Cambiamos de @PrimaryGeneratedColumn a @PrimaryColumn por error en consola
   id: string;
-
-  @OneToOne(() => Store, (store) => store.user, { eager: true })
-  store?: Store;
-
-  @OneToMany(() => Order, (order) => order.buyer, { eager: true })
-  orders?: Order[];
-
-  @OneToMany(() => Question, (question) => question.user, { eager: true })
-  questions?: Question[];
-
-  @OneToMany(() => Review, (review) => review.user, { eager: true })
-  reviews?: Review[];
 
   @Column('text', {
     unique: true,
@@ -93,6 +80,11 @@ export class User {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @BeforeInsert()
+  generateId() {
+    this.id = uuidv4(); // Generamos el UUID justo antes de insertar en la DB
+  }
 
   @BeforeInsert()
   checkFieldsBeforeInsert() {
