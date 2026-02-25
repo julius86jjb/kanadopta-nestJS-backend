@@ -9,6 +9,7 @@ import { SeedModule } from './seed/seed.module';
 import { FilesModule } from './files/files.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
 import { AuthModule } from './users/auth/auth.module';
+import { AdoptionCentersModule } from './adoption-centers/adoption-centers.module';
 
 @Module({
   imports: [
@@ -33,7 +34,8 @@ import { AuthModule } from './users/auth/auth.module';
     SeedModule,
     FilesModule,
     CloudinaryModule,
-    AuthModule
+    AuthModule,
+    AdoptionCentersModule
    ],
   controllers: [AppController],
   providers: [AppService],
