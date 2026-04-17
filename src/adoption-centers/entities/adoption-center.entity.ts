@@ -1,11 +1,12 @@
-import { BeforeInsert, BeforeUpdate, Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { BeforeInsert, BeforeUpdate, Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 import { DonationInfo } from '../interfaces/donation-info.interface';
 import { LegalInfo } from '../interfaces/legal-info.interface';
-import { OpeningHours } from '../interfaces/opening-hours.interface';
+import { OpeningHours } from '../interfaces/opening-hours.interface'; // Esta es la nueva interfaz estructurada
 import { SocialLinks } from '../interfaces/social-links.interface';
-
-// Importamos tus interfaces
+import { AdoptionCenterImage } from './adoption-center-images.entity';
+import { User } from 'src/users/entities/user.entity';
+import { SupportedSpecies } from '../dto/create-adoption-center.dto';
 
 @Entity({ name: 'adoption_centers' })
 export class AdoptionCenter {
@@ -25,132 +26,66 @@ export class AdoptionCenter {
   @Column('text', { unique: true })
   slug: string;
 
-  // --- Ubicación ---
-  @Column('text')
-  address: string;
+  @Column('text') address: string;
+  @Column('text') city: string;
+  @Column('text') zipCode: string;
+  @Column('text', { default: 'España' }) country: string;
+  @Column('float', { default: 0, nullable: true }) lat: number;
+  @Column('float', { default: 0, nullable: true }) lng: number;
 
-  @Column('text')
-  city: string;
+  @Column('text', { unique: true }) phone: string;
+  @Column('text', { unique: true }) email: string;
+  @Column('text') managerName: string;
 
-  @Column('text')
-  zipCode: string;
+  @Column('simple-json', { nullable: true }) socialLinks: SocialLinks;
+  @Column('simple-json', { nullable: true }) legalInfo: LegalInfo;
+  @Column('simple-json', { nullable: true }) donationInfo: DonationInfo;
 
-  @Column('text', { default: 'ES' })
-  country: string;
+  // Aquí es donde reside la magia del objeto estructurado
+  @Column('simple-json', { nullable: true }) openingHours: OpeningHours;
 
-  // Tipo Numérico (float) para coordenadas
-  @Column('float', { default: 0, nullable: true })
-  lat: number;
+  @Column('text', { array: true, default: [] }) supportedSpecies: SupportedSpecies[];
+  @Column('int', { default: 0 }) capacity: number;
+  @Column('text', { array: true, default: [] }) tags: string[];
+  @Column('int', { default: 0 }) currentOccupancy: number;
+  @Column('boolean', { nullable: true }) hasVeterinaryService: boolean;
+  @Column('boolean', { nullable: true }) hasTransportService: boolean;
+  @Column('boolean', { nullable: true }) allowsVolunteers: boolean;
+  @Column('text', { nullable: true }) adoptionPolicy: string;
+  @Column('boolean', { default: true }) isActive: boolean;
+  @Column('boolean', { default: false }) isVerified: boolean;
+  @Column('boolean', { default: false }) isEmergency: boolean;
+  @Column('int', { default: 0 }) likesCount: number;
 
-  @Column('float', { default: 0, nullable: true })
-  lng: number;
+  @OneToMany(() => AdoptionCenterImage, (img) => img.adoptionCenter, { cascade: true })
+  images?: AdoptionCenterImage[];
 
-  // --- Contacto ---
-  @Column('text')
-  phone: string;
+  @ManyToOne(() => User, (user) => user.adoptionCenters, { eager: true })
+  user: User;
 
-  @Column('text', { unique: true })
-  email: string;
+  @CreateDateColumn() createdAt: Date;
+  @UpdateDateColumn() updatedAt: Date;
 
-  @Column('text', { nullable: true })
-  managerName: string;
-
-  // --- Campos JSON (con simple-json para compatibilidad total) ---
-  @Column('simple-json', { nullable: true })
-  socialLinks: SocialLinks;
-
-  @Column('simple-json', { nullable: true })
-  legalInfo: LegalInfo;
-
-  @Column('simple-json', { nullable: true })
-  donationInfo: DonationInfo;
-
-  @Column('simple-json', { nullable: true })
-  hours: OpeningHours;
-
-  // --- Especialización e Instalaciones ---
-  @Column('text', { array: true, default: [] })
-  supportedSpecies: string[];
-
-  @Column('text', { array: true, default: [] })
-  facilities: string[];
-
-  @Column('text', { array: true, default: [] })
-  tags: string[];
-
-  // Tipos Enteros (int)
-  @Column('int', { default: 0 })
-  capacity: number;
-
-  @Column('int', { default: 0 })
-  currentOccupancy: number;
-
-  @Column('int', { default: 0, nullable: true })
-  staffCount: number;
-
-  // --- Operación y Finanzas ---
-  @Column('text', { nullable: true })
-  adoptionPolicy: string;
-
-  @Column('text', { nullable: true })
-  mainImage: string;
-
-  // Tipo Numérico para costes (precisión)
-  @Column('float', { default: 0, nullable: true })
-  monthlyOperatingCost: number;
-
-  // --- Estado y Administración ---
-  @Column('boolean', { default: true })
-  isActive: boolean;
-
-  @Column('boolean', { default: false })
-  isVerified: boolean;
-
-  @Column('boolean', { default: false })
-  isEmergency: boolean;
-
-  @Column('float', { default: 0 })
-  rating: number;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
-
-  // --- Hooks ---
   @BeforeInsert()
-  checkId() {
+  checkBeforeInsert() {
     if (!this.id) this.id = uuidv4();
-  }
-
-  // ... resto de tus columnas ...
-
-  @BeforeInsert()
-  checkSlugInsert() {
-    // Generamos el ID si no viene (esto ya lo teníamos)
-    if (!this.id) {
-      this.id = uuidv4(); // o la lógica de UUID que estés usando
-    }
-
-    // Lógica de Fernando: Si no viene slug, usamos el name
-    if (!this.slug) {
-      this.slug = this.name;
-    }
-
-    this.slug = this.slug
-      .toLowerCase()
-      .replaceAll(' ', '_') // Fernando usa '-', tú puedes usar '_' o '-' como prefieras
-      .replaceAll("'", '');
+    if (!this.slug) this.slug = this.name;
+    this.generateSlug();
   }
 
   @BeforeUpdate()
   checkSlugUpdate() {
-    // Forzamos que el slug siempre se genere del nombre actual,
-    // así, si el nombre cambia, el slug cambia obligatoriamente.
-    this.slug = this.name
+    this.generateSlug();
+  }
+
+  private generateSlug() {
+    this.slug = this.slug
       .toLowerCase()
-      .replaceAll(' ', '_')
-      .replaceAll("'", '');
+      .trim()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
   }
 }

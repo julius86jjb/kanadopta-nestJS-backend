@@ -1,292 +1,46 @@
-interface SeedDepartment {
-    name: string
-    titles: string[]
-    slug: string
-    img: string
-    icon: string
-    views: number
-    categories: Category[]
-}
-
-interface Category {
-    name: string
-    department_title: string
-}
-
-interface SeedData {
-    departments: SeedDepartment[];
-}
-
-
-export const initialData: SeedData = {
-    departments: [
-        {
-            name: "Consumer Electric",
-            titles: [
-                "Electronic",
-                "Accessories and Parts"
-            ],
-            slug: "consumer-electric",
-            img: "comsumer-electric.jpg",
-            icon: "icon-laundry",
-            views: 2,
-            categories: [
-                {
-                    name: "Home Audio and Theathers",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "TV and Videos",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Camera, Photos and Videos",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Cellphones and Accessories",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Headphones",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Video games",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Wireless Speakers",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Office Electronic",
-                    department_title: "Electronic"
-                },
-                {
-                    name: "Digital Cables",
-                    department_title: "Accessories and Parts"
-                },
-                {
-                    name: "Audio and Video Cables",
-                    department_title: "Accessories and Parts"
-                },
-                {
-                    name: "Batteries",
-                    department_title: "Accessories and Parts"
-                }
-            ]
-        },
-        {
-            name: "Clothing and Apparel",
-            titles: [
-                "Mens",
-                "Womens",
-                "Kids"
-            ],
-            slug: "clothing-apparel",
-            img: "clothing-apparel.jpg",
-            icon: "icon-shirt",
-            views: 4,
-            categories: [
-                {
-                    name: "Sportswear man",
-                    department_title: "Mens"
-                },
-                {
-                    name: "Elegant clothes man",
-                    department_title: "Mens"
-                },
-                {
-                    name: "Classic clothes man",
-                    department_title: "Mens"
-                },
-                {
-                    name: "Sportswear woman",
-                    department_title: "Womens"
-                },
-                {
-                    name: "Elegant clothes woman",
-                    department_title: "Womens"
-                },
-                {
-                    name: "Classic clothes woman",
-                    department_title: "Womens"
-                },
-                {
-                    name: "Sportswear kids",
-                    department_title: "Kids"
-                },
-                {
-                    name: "Elegant clothes kids",
-                    department_title: "Kids"
-                },
-                {
-                    name: "Classic clothes kids",
-                    department_title: "Kids"
-                }
-            ]
-        },
-        {
-            name: "Home, Garden and Kitchen",
-            titles: [
-                "Home",
-                "Garden",
-                "Kitchen"
-            ],
-            slug: "home-kitchen",
-            img: "home-kitchen.jpg",
-            icon: "icon-lampshade",
-            views: 5,
-            categories: [
-                {
-                    name: "Cookware",
-                    department_title: "Home"
-                },
-                {
-                    name: "Decoration",
-                    department_title: "Home"
-                },
-                {
-                    name: "Furniture",
-                    department_title: "Home"
-                },
-                {
-                    name: "Garden Tools",
-                    department_title: "Garden"
-                },
-                {
-                    name: "Garden Equipments",
-                    department_title: "Garden"
-                },
-                {
-                    name: "Powers and Hand Tools",
-                    department_title: "Garden"
-                },
-                {
-                    name: "Utensil and Gadget",
-                    department_title: "Garden"
-                },
-                {
-                    name: "Kitchen Equipments",
-                    department_title: "Kitchen"
-                },
-                {
-                    name: "Kitchen Utensil",
-                    department_title: "Kitchen"
-                }
-            ]
-        },
-        {
-            name: "Health and Beauty",
-            titles: [
-                "Health",
-                "Beauty"
-            ],
-            slug: "health-beauty",
-            img: "health-beauty.jpg",
-            icon: "icon-heart-pulse",
-            views: 23,
-            categories: [
-                {
-                    name: "Yoga Instrument",
-                    department_title: "Health"
-                },
-                {
-                    name: "Passive Gymnastics",
-                    department_title: "Health"
-                },
-                {
-                    name: "Gym Equipment",
-                    department_title: "Health"
-                },
-                {
-                    name: "Hair Care",
-                    department_title: "Beauty"
-                },
-                {
-                    name: "Makeup",
-                    department_title: "Beauty"
-                },
-                {
-                    name: "Perfume",
-                    department_title: "Beauty"
-                }
-            ]
-        },
-        {
-            name: "Jewelry and Watches",
-            titles: [
-                "Jewelry",
-                "Watches"
-            ],
-            slug: "jewelry-watches",
-            img: "jewelry-watches.jpg",
-            icon: "icon-diamond2",
-            views: 3,
-            categories: [
-                {
-                    name: "Necklace",
-                    department_title: "Jewelry"
-                },
-                {
-                    name: "Pendant",
-                    department_title: "Jewelry"
-                },
-                {
-                    name: "Ring",
-                    department_title: "Jewelry"
-                },
-                {
-                    name: "Sport Watch",
-                    department_title: "Watches"
-                },
-                {
-                    name: "Womens Watch",
-                    department_title: "Watches"
-                },
-                {
-                    name: "Mens Watch",
-                    department_title: "Watches"
-                }
-            ]
-        },
-        {
-            name: "Computer and Technology",
-            titles: [
-                "Computer",
-                "Technology"
-            ],
-            slug: "computer-technology",
-            img: "computer-technology.jpg",
-            icon: "icon-desktop",
-            views: 45,
-            categories: [
-                {
-                    name: "Smartphones",
-                    department_title: "Technology"
-                },
-                {
-                    name: "Tablets",
-                    department_title: "Technology"
-                },
-                {
-                    name: "Wireless Speaker",
-                    department_title: "Technology"
-                },
-                {
-                    name: "Desktop PC",
-                    department_title: "Computer"
-                },
-                {
-                    name: "Laptop",
-                    department_title: "Computer"
-                },
-                {
-                    name: "Audio and Video",
-                    department_title: "Computer"
-                }
-            ]
-        }
-    ]
-}
+export const initialData = {
+  users: [
+    { email: 'admin@kanadopta.com', password: 'Admin123Password!', userName: 'super_admin', first_name: 'Julio', last_name: 'Admin', country: 'España', city: 'Las Palmas', address: 'Calle Triana 1', roles: ['admin'] },
+    { email: 'partner1@kanadopta.com', password: 'PartnerPassword123!', userName: 'triana_manager', first_name: 'Maria', last_name: 'Partner', country: 'España', city: 'Las Palmas', address: 'Calle Triana 2', roles: ['partner'] },
+    { email: 'partner2@kanadopta.com', password: 'PartnerPassword123!', userName: 'mesa_manager', first_name: 'Juan', last_name: 'Partner', country: 'España', city: 'Las Palmas', address: 'Mesa y Lopez 5', roles: ['partner'] },
+    { email: 'partner3@kanadopta.com', password: 'PartnerPassword123!', userName: 'isleta_manager', first_name: 'Elena', last_name: 'Partner', country: 'España', city: 'Las Palmas', address: 'La Naval 10', roles: ['partner'] },
+    { email: 'user1@kanadopta.com', password: 'UserPassword123!', userName: 'carlos_g', first_name: 'Carlos', last_name: 'García', country: 'España', city: 'Las Palmas', address: 'Calle Vegueta 1', roles: ['user'] },
+    { email: 'user2@kanadopta.com', password: 'UserPassword123!', userName: 'ana_p', first_name: 'Ana', last_name: 'Pérez', country: 'España', city: 'Las Palmas', address: 'Paseo Chil 2', roles: ['user'] },
+    { email: 'user3@kanadopta.com', password: 'UserPassword123!', userName: 'luis_r', first_name: 'Luis', last_name: 'Rodríguez', country: 'España', city: 'Las Palmas', address: 'Tomás Morales 5', roles: ['user'] },
+    { email: 'user4@kanadopta.com', password: 'UserPassword123!', userName: 'marta_s', first_name: 'Marta', last_name: 'Sánchez', country: 'España', city: 'Las Palmas', address: 'Guanarteme 8', roles: ['user'] },
+    { email: 'user5@kanadopta.com', password: 'UserPassword123!', userName: 'pedro_m', first_name: 'Pedro', last_name: 'Martín', country: 'España', city: 'Las Palmas', address: 'Siete Palmas 3', roles: ['user'] },
+    { email: 'user6@kanadopta.com', password: 'UserPassword123!', userName: 'laura_l', first_name: 'Laura', last_name: 'López', country: 'España', city: 'Las Palmas', address: 'Escaleritas 4', roles: ['user'] },
+  ],
+  centers: [
+    { name: "Centro Triana", organizationCode: "CT-001", description: "Sede Triana", phone: "928000001", email: "triana@kanadopta.com", address: "Calle Mayor de Triana 1", city: "Las Palmas de Gran Canaria", zipCode: "35002", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CT-001_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CT-001_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CT-001_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Mesa y Lopez", organizationCode: "CML-002", description: "Sede Mesa y Lopez", phone: "928000002", email: "mesa@kanadopta.com", address: "Avenida José Mesa y López 1", city: "Las Palmas de Gran Canaria", zipCode: "35006", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CML-002_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CML-002_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CML-002_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Santa Catalina", organizationCode: "CSC-003", description: "Sede Santa Catalina", phone: "928000003", email: "catalina@kanadopta.com", address: "Parque de Santa Catalina 1", city: "Las Palmas de Gran Canaria", zipCode: "35007", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CSC-003_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CSC-003_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CSC-003_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Las Canteras", organizationCode: "CLC-004", description: "Sede Canteras", phone: "928000004", email: "canteras@kanadopta.com", address: "Calle Prudencio Morales 1", city: "Las Palmas de Gran Canaria", zipCode: "35009", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CLC-004_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CLC-004_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CLC-004_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Vegueta", organizationCode: "CV-005", description: "Sede Vegueta", phone: "928000005", email: "vegueta@kanadopta.com", address: "Calle Juan de Quesada 1", city: "Las Palmas de Gran Canaria", zipCode: "35001", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CV-005_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CV-005_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CV-005_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Obelisco", organizationCode: "CO-006", description: "Sede Obelisco", phone: "928000006", email: "obelisco@kanadopta.com", address: "Calle Tomás Morales 1", city: "Las Palmas de Gran Canaria", zipCode: "35003", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CO-006_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CO-006_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CO-006_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Alcaravaneras", organizationCode: "CA-007", description: "Sede Alcaravaneras", phone: "928000007", email: "alcaravaneras@kanadopta.com", address: "Calle León y Castillo 200", city: "Las Palmas de Gran Canaria", zipCode: "35004", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CA-007_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CA-007_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CA-007_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Puerto", organizationCode: "CP-008", description: "Sede Puerto", phone: "928000008", email: "puerto@kanadopta.com", address: "Calle Juan Rejón 1", city: "Las Palmas de Gran Canaria", zipCode: "35008", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CP-008_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CP-008_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CP-008_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Arenales", organizationCode: "CAR-009", description: "Sede Arenales", phone: "928000009", email: "arenales@kanadopta.com", address: "Calle Luis Doreste Silva 1", city: "Las Palmas de Gran Canaria", zipCode: "35004", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CAR-009_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CAR-009_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CAR-009_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Ciudad Alta", organizationCode: "CCA-010", description: "Sede Ciudad Alta", phone: "928000010", email: "alta@kanadopta.com", address: "Paseo de Chil 1", city: "Las Palmas de Gran Canaria", zipCode: "35011", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CCA-010_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CCA-010_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CCA-010_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Escaleritas", organizationCode: "CE-011", description: "Sede Escaleritas", phone: "928000011", email: "escaleritas@kanadopta.com", address: "Avenida de Escaleritas 1", city: "Las Palmas de Gran Canaria", zipCode: "35011", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CE-011_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CE-011_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CE-011_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Schamann", organizationCode: "CS-012", description: "Sede Schamann", phone: "928000012", email: "schamann@kanadopta.com", address: "Calle Pedro Infinito 1", city: "Las Palmas de Gran Canaria", zipCode: "35012", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CS-012_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CS-012_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CS-012_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Siete Palmas", organizationCode: "CSP-013", description: "Sede Siete Palmas", phone: "928000013", email: "7palmas@kanadopta.com", address: "Avenida Pintor Felo Monzón 1", city: "Las Palmas de Gran Canaria", zipCode: "35019", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CSP-013_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CSP-013_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CSP-013_gal/800/600', type: 'gallery' }] },
+    { name: "Centro La Isleta", organizationCode: "CLI-014", description: "Sede La Isleta", phone: "928000014", email: "isleta@kanadopta.com", address: "Calle de la Naval 1", city: "Las Palmas de Gran Canaria", zipCode: "35008", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CLI-014_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CLI-014_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CLI-014_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Miller Bajo", organizationCode: "CMB-015", description: "Sede Miller Bajo", phone: "928000015", email: "miller@kanadopta.com", address: "Calle de Miller Industrial 1", city: "Las Palmas de Gran Canaria", zipCode: "35014", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CMB-015_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CMB-015_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CMB-015_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Lomo Los Frailes", organizationCode: "CLLF-016", description: "Sede Lomo Los Frailes", phone: "928000016", email: "frailes@kanadopta.com", address: "Calle de los Frailes 1", city: "Las Palmas de Gran Canaria", zipCode: "35018", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CLLF-016_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CLLF-016_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CLLF-016_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Tamaraceite", organizationCode: "CTAM-017", description: "Sede Tamaraceite", phone: "928000017", email: "tamaraceite@kanadopta.com", address: "Carretera General del Norte 1", city: "Las Palmas de Gran Canaria", zipCode: "35018", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CTAM-017_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CTAM-017_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CTAM-017_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Tafira", organizationCode: "CTAF-018", description: "Sede Tafira", phone: "928000018", email: "tafira@kanadopta.com", address: "Carretera del Centro 1", city: "Las Palmas de Gran Canaria", zipCode: "35017", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CTAF-018_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CTAF-018_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CTAF-018_gal/800/600', type: 'gallery' }] },
+    { name: "Centro San Telmo", organizationCode: "CST-019", description: "Sede San Telmo", phone: "928000019", email: "santelmo@kanadopta.com", address: "Calle Bravo Murillo 1", city: "Las Palmas de Gran Canaria", zipCode: "35003", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CST-019_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CST-019_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CST-019_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Guanarteme", organizationCode: "CG-020", description: "Sede Guanarteme", phone: "928000020", email: "guanarteme@kanadopta.com", address: "Calle Fernando Guanarteme 1", city: "Las Palmas de Gran Canaria", zipCode: "35010", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CG-020_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CG-020_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CG-020_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Las Torres", organizationCode: "CLT-021", description: "Sede Las Torres", phone: "928000021", email: "torres@kanadopta.com", address: "Calle Juan Carlos I 1", city: "Las Palmas de Gran Canaria", zipCode: "35019", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CLT-021_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CLT-021_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CLT-021_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Hoya de la Plata", organizationCode: "CHP-022", description: "Sede Hoya de la Plata", phone: "928000022", email: "hoya@kanadopta.com", address: "Calle de la Plata 1", city: "Las Palmas de Gran Canaria", zipCode: "35016", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CHP-022_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CHP-022_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CHP-022_gal/800/600', type: 'gallery' }] },
+    { name: "Centro San Cristobal", organizationCode: "CSC-023", description: "Sede San Cristobal", phone: "928000023", email: "cristobal@kanadopta.com", address: "Calle Marina de San Cristóbal 1", city: "Las Palmas de Gran Canaria", zipCode: "35016", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CSC-023_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CSC-023_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CSC-023_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Vegueta Catedral", organizationCode: "CVC-024", description: "Sede Catedral", phone: "928000024", email: "catedral@kanadopta.com", address: "Plaza de Santa Ana 1", city: "Las Palmas de Gran Canaria", zipCode: "35001", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CVC-024_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CVC-024_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CVC-024_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Tomas Miller", organizationCode: "CTM-025", description: "Sede Tomas Miller", phone: "928000025", email: "tmiller@kanadopta.com", address: "Calle Tomás Miller 10", city: "Las Palmas de Gran Canaria", zipCode: "35007", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CTM-025_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CTM-025_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CTM-025_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Luis Morote", organizationCode: "CLM-026", description: "Sede Luis Morote", phone: "928000026", email: "morote@kanadopta.com", address: "Calle Luis Morote 15", city: "Las Palmas de Gran Canaria", zipCode: "35007", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CLM-026_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CLM-026_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CLM-026_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Sagasta", organizationCode: "CSAG-027", description: "Sede Sagasta", phone: "928000027", email: "sagasta@kanadopta.com", address: "Calle Sagasta 20", city: "Las Palmas de Gran Canaria", zipCode: "35008", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CSAG-027_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CSAG-027_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CSAG-027_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Primero de Mayo", organizationCode: "CPM-028", description: "Sede 1º de Mayo", phone: "928000028", email: "1mayo@kanadopta.com", address: "Avenida Primero de Mayo 10", city: "Las Palmas de Gran Canaria", zipCode: "35002", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CPM-028_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CPM-028_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CPM-028_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Francisco Gourié", organizationCode: "CFG-029", description: "Sede Gourie", phone: "928000029", email: "gourie@kanadopta.com", address: "Calle Francisco Gourié 1", city: "Las Palmas de Gran Canaria", zipCode: "35002", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CFG-029_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CFG-029_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CFG-029_gal/800/600', type: 'gallery' }] },
+    { name: "Centro Rafael Cabrera", organizationCode: "CRC-030", description: "Sede Rafael Cabrera", phone: "928000030", email: "cabrera@kanadopta.com", address: "Calle Rafael Cabrera 1", city: "Las Palmas de Gran Canaria", zipCode: "35002", isVerified: true, images: [{ url: 'https://picsum.photos/seed/CRC-030_logo/200/200', type: 'logo' }, { url: 'https://picsum.photos/seed/CRC-030_feat/800/600', type: 'featured' }, { url: 'https://picsum.photos/seed/CRC-030_gal/800/600', type: 'gallery' }] }
+  ]
+};

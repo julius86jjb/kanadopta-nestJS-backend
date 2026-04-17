@@ -3,6 +3,6 @@ import { HandleExceptionsService } from './services/handle-exceptions.service';
 
 @Module({
     providers: [HandleExceptionsService],
-    exports: [HandleExceptionsService]
+    exports: [HandleExceptionsService],
 })
 export class CommonModule {}

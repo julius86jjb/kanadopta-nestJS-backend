@@ -8,8 +8,13 @@ export class HandleExceptionsService {
   public handleDBExceptions(error: any) {
     this.logger.error(error);
     console.log(error);
-    if ((error.code === '23505')) throw new BadRequestException(error);
-    
+    if (error.code === '23505') {
+      throw new BadRequestException({
+        message: 'Registro duplicado',
+        detail: error.detail // Solo el detalle específico que da Postgres
+      });
+    }
+
 
 
 

@@ -1,24 +1,21 @@
-import { IsBoolean, IsString } from 'class-validator';
-
 import {
   BeforeInsert,
   BeforeUpdate,
   Column,
   CreateDateColumn,
+  DeleteDateColumn, // Importación necesaria para Soft Delete
   Entity,
-  JoinColumn,
   OneToMany,
-  OneToOne,
-  PrimaryGeneratedColumn,
+  PrimaryColumn,
   UpdateDateColumn,
-  PrimaryColumn
 } from 'typeorm';
+import { v4 as uuidv4 } from 'uuid';
 import { ValidRoles } from '../auth/interfaces/valid-roles.interface';
-import { v4 as uuidv4 } from 'uuid'
+import { AdoptionCenter } from '../../adoption-centers/entities/adoption-center.entity';
 
 @Entity({ name: 'users' })
 export class User {
-  @PrimaryColumn('uuid') // Cambiamos de @PrimaryGeneratedColumn a @PrimaryColumn por error en consola
+  @PrimaryColumn('uuid')
   id: string;
 
   @Column('text', {
@@ -71,9 +68,16 @@ export class User {
 
   @Column('text', {
     array: true,
-    default:['user']
+    default: ['user']
   })
-  roles: ValidRoles[] 
+  roles: ValidRoles[];
+
+  // --- RELACIÓN CON CENTROS DE ADOPCIÓN ---
+  @OneToMany(
+    () => AdoptionCenter,
+    (adoptionCenter) => adoptionCenter.user,
+  )
+  adoptionCenters: AdoptionCenter[];
 
   @CreateDateColumn()
   created_at: Date;
@@ -81,9 +85,15 @@ export class User {
   @UpdateDateColumn()
   updated_at: Date;
 
+  // --- BORRADO LÓGICO ---
+  @DeleteDateColumn()
+  deleted_at: Date;
+
   @BeforeInsert()
   generateId() {
-    this.id = uuidv4(); // Generamos el UUID justo antes de insertar en la DB
+    if (!this.id) {
+      this.id = uuidv4();
+    }
   }
 
   @BeforeInsert()
