@@ -82,25 +82,28 @@ export class CreateAdoptionCenterDto {
   @IsString() @IsOptional() organizationCode: string;
   @IsString() @IsOptional() description?: string;
   @IsString() @IsOptional() slug: string;
+
   @IsString() address: string;
   @IsString() city: string;
+  @IsString() province: string; // Nuevo y obligatorio
+  @IsString() state: string;    // Nuevo y obligatorio (Comunidad Autónoma)
   @IsString() zipCode: string;
   @IsString() country: string;
   @IsNumber() @IsOptional() lat?: number;
   @IsNumber() @IsOptional() lng?: number;
+
+
   @IsString() phone: string;
   @IsEmail() email: string;
   @IsString() managerName: string;
 
   @IsOptional() @ValidateNested() @Type(() => SocialLinksDto) socialLinks?: SocialLinksDto;
-
-  // Actualizado: Ahora es obligatorio validar la estructura de horarios si se envía
   @IsOptional() @ValidateNested() @Type(() => OpeningHoursDto) openingHours?: OpeningHoursDto;
-
   @IsOptional() @ValidateNested() @Type(() => LegalInfoDto) legalInfo?: LegalInfoDto;
   @IsOptional() @ValidateNested() @Type(() => DonationInfoDto) donationInfo?: DonationInfoDto;
-
   @IsNotEmpty() @IsEnum(SupportedSpecies, { each: true }) supportedSpecies: SupportedSpecies[];
+
+  
   @IsNumber() @IsOptional() capacity: number;
   @IsArray() @IsOptional() tags: string[]
   @IsInt() currentOccupancy: number;

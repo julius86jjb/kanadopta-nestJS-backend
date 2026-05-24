@@ -13,45 +13,47 @@ export class AdoptionCenter {
 
   @PrimaryColumn('uuid')
   id: string;
-
   @Column('text', { unique: true })
   name: string;
-
   @Column('text', { unique: true })
   organizationCode: string;
-
   @Column('text', { nullable: true })
   description: string;
-
   @Column('text', { unique: true })
   slug: string;
 
+  // Ubicacion
   @Column('text') address: string;
   @Column('text') city: string;
+  @Column('text', { nullable: true }) province: string; // Nuevo: Provincia
+  @Column('text', { nullable: true }) state: string;    // Nuevo: Comunidad Autónoma
   @Column('text') zipCode: string;
   @Column('text', { default: 'España' }) country: string;
   @Column('float', { default: 0, nullable: true }) lat: number;
   @Column('float', { default: 0, nullable: true }) lng: number;
 
+  // Contacto
   @Column('text', { unique: true }) phone: string;
   @Column('text', { unique: true }) email: string;
   @Column('text') managerName: string;
 
+  
   @Column('simple-json', { nullable: true }) socialLinks: SocialLinks;
   @Column('simple-json', { nullable: true }) legalInfo: LegalInfo;
   @Column('simple-json', { nullable: true }) donationInfo: DonationInfo;
-
-  // Aquí es donde reside la magia del objeto estructurado
   @Column('simple-json', { nullable: true }) openingHours: OpeningHours;
 
   @Column('text', { array: true, default: [] }) supportedSpecies: SupportedSpecies[];
   @Column('int', { default: 0 }) capacity: number;
   @Column('text', { array: true, default: [] }) tags: string[];
   @Column('int', { default: 0 }) currentOccupancy: number;
+
+
   @Column('boolean', { nullable: true }) hasVeterinaryService: boolean;
   @Column('boolean', { nullable: true }) hasTransportService: boolean;
   @Column('boolean', { nullable: true }) allowsVolunteers: boolean;
   @Column('text', { nullable: true }) adoptionPolicy: string;
+  
   @Column('boolean', { default: true }) isActive: boolean;
   @Column('boolean', { default: false }) isVerified: boolean;
   @Column('boolean', { default: false }) isEmergency: boolean;

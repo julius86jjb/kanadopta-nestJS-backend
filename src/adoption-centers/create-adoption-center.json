@@ -1,0 +1,919 @@
+[
+    {
+        "name": "Protectora La Laguna",
+        "description": "Asociación Protectora de Animales de Callosa de Segura. Nos dedicamos al rescate, rehabilitación y búsqueda de hogares responsables para animales abandonados en la zona de la Vega Baja. Asociación Protectora de Animales de Callosa de Segura. Nos dedicamos al rescate, rehabilitación y búsqueda de hogares responsables para animales abandonados en la zona de la Vega Baja. Asociación Protectora de Animales de Callosa de Segura. Nos dedicamos al rescate, rehabilitación y búsqueda de hogares responsables para animales abandonados en la zona de la Vega Baja.",
+        "address": "Los Lagares, 2, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+346299211144",
+        "email": "info@lala1una.es",
+        "managerName": "Fede Valverde",
+        "socialLinks": {
+            "facebook": "https://facebook.com/apadac",
+            "instagram": "https://instagram.com/apadac_oficial",
+            "twitter": "https://twitter.com/apadac",
+            "website": "https://apadac.es"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "friday": {
+                "type": "appointment"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donaciones@apadac.es",
+            "bankAccount": "ES21 0000 0000 0000 0000 0000",
+            "wishlist": "https://amazon.es/wishlist/apadac"
+        },
+        "legalInfo": {
+            "taxId": "G12345678",
+            "legalName": "Asociación Protectora Apadac",
+            "foundationDate": "2010-05-20"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos"
+        ],
+        "capacity": 299,
+        "currentOccupancy": 111,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.Contrato de adopción, seguimiento post-adopción y compromiso de esterilización.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": true,
+        "likesCount": 0
+    },
+    {
+        "name": "Refugio del Monte Lentiscal",
+        "description": "Somos un centro de acogida especializado en la recuperación de animales que han sufrido abandono en zonas rurales. Trabajamos mano a mano con veterinarios de la zona para asegurar que cada perro y gato reciba el tratamiento necesario antes de entrar en nuestro programa de adopción responsable. Nuestra prioridad es el bienestar físico y emocional del animal sobre todas las cosas.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928114233",
+        "email": "contacto@monteleniscal.org",
+        "managerName": "Sara Montiel",
+        "socialLinks": {
+            "facebook": "https://facebook.com/refugiomontelentiscal",
+            "instagram": "https://instagram.com/monte_lentiscal_animal",
+            "twitter": "https://twitter.com/mlentiscal",
+            "website": "https://montelentiscal.org"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "15:30"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "15:30"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "15:30"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "15:30"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "15:30"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donar@montelentiscal.org",
+            "bankAccount": "ES99 8888 7777 6666 5555 4444",
+            "wishlist": "https://amazon.es/wishlist/monte-lentiscal"
+        },
+        "legalInfo": {
+            "taxId": "G99887766",
+            "legalName": "Asociación Amigos de Tafira Alta",
+            "foundationDate": "2018-03-10"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos"
+        ],
+        "capacity": 150,
+        "currentOccupancy": 85,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Exigimos un periodo de pre-adopción de 15 días para asegurar la compatibilidad con el hogar. Todos los animales se entregan con microchip, vacunas al día y esterilizados si su edad lo permite. Realizamos visitas domiciliarias aleatorias durante el primer año de adopción.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 0
+    },
+    {
+        "name": "Asociación Huellas del Norte",
+        "description": "Ubicados en el norte de Gran Canaria, nuestro centro se enfoca en el rescate de animales en entornos rurales y su posterior socialización. Disponemos de áreas recreativas amplias y un programa de voluntariado activo para garantizar que cada estancia sea lo más humana posible mientras esperan su hogar definitivo.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928601522",
+        "email": "contacto@huellasdelnorte.org",
+        "managerName": "Roberto Santana",
+        "socialLinks": {
+            "facebook": "https://facebook.com/huellasnorte",
+            "instagram": "https://instagram.com/huellas_del_norte",
+            "twitter": "https://twitter.com/huellasnorte",
+            "website": "https://huellasdelnorte.org"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "saturday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "13:00"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donativos@huellasdelnorte.org",
+            "bankAccount": "ES44 1234 5678 9012 3456 7890",
+            "wishlist": "https://amazon.es/wishlist/huellas-norte"
+        },
+        "legalInfo": {
+            "taxId": "G35400123",
+            "legalName": "Asociación Protectora Huellas del Norte de Arucas",
+            "foundationDate": "2020-06-15"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos",
+            "conejos"
+        ],
+        "capacity": 100,
+        "currentOccupancy": 42,
+        "hasVeterinaryService": true,
+        "hasTransportService": false,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "El proceso incluye entrevista previa, cuestionario de idoneidad y contrato de adopción legal. Se realiza un seguimiento obligatorio de 6 meses tras la entrega del animal.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 0
+    },
+    {
+        "name": "Protectora Huellas del Teide",
+        "description": "Dedicados al rescate de razas autóctonas y perros de trabajo en situación de abandono. Contamos con un programa específico de rehabilitación psicológica para animales con traumas severos.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928101010",
+        "email": "contacto@huellasteide.org",
+        "managerName": "Elena Santana",
+        "socialLinks": {
+            "facebook": "https://facebook.com/huellasteide",
+            "instagram": "https://instagram.com/huellasteide_oficial",
+            "website": "https://huellasteide.org"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "13:30"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "13:30"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "13:30"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "08:30",
+                "closeTime": "13:30"
+            },
+            "friday": {
+                "type": "appointment"
+            },
+            "saturday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "12:00"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donar@huellasteide.org",
+            "bankAccount": "ES40 1234 5678 9012 3456 7890",
+            "wishlist": "https://amazon.es/wishlist/huellasteide"
+        },
+        "legalInfo": {
+            "taxId": "G99000001",
+            "legalName": "Asociación Huellas del Teide GC",
+            "foundationDate": "2012-03-15"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos"
+        ],
+        "capacity": 150,
+        "currentOccupancy": 88,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Entrevista previa, contrato de adopción y obligatoriedad de microchip a nombre del adoptante.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 5
+    },
+    {
+        "name": "Refugio Felino El Ronroneo",
+        "description": "Especialistas en colonias felinas urbanas y rescate de gatos en entornos difíciles. Disponemos de gateras climatizadas y zona de cuarentena específica para cachorros.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34655443322",
+        "email": "adopciones@ronroneo.es",
+        "managerName": "Marcos Rodríguez",
+        "socialLinks": {
+            "instagram": "https://instagram.com/elronroneo_gc",
+            "twitter": "https://twitter.com/ronroneorefugio"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "18:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "18:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "18:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "18:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "18:00"
+            },
+            "saturday": {
+                "type": "appointment"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "paypal@ronroneo.es",
+            "bankAccount": "ES40 9876 5432 1098 7654 3210"
+        },
+        "legalInfo": {
+            "taxId": "G99000002",
+            "legalName": "Fundación El Ronroneo",
+            "foundationDate": "2018-06-22"
+        },
+        "supportedSpecies": [
+            "gatos"
+        ],
+        "capacity": 80,
+        "currentOccupancy": 42,
+        "hasVeterinaryService": true,
+        "hasTransportService": false,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Protección obligatoria en ventanas y balcones. Contrato de esterilización a los 6 meses.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": true,
+        "likesCount": 12
+    },
+    {
+        "name": "Asociación SOS Podencos Canaria",
+        "description": "Focados en la protección del podenco canario. Trabajamos contra el abandono masivo tras la temporada de caza y promovemos la adopción en Europa.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928334455",
+        "email": "info@sospodencos.com",
+        "managerName": "Beatriz Méndez",
+        "socialLinks": {
+            "facebook": "https://facebook.com/sospodencos",
+            "website": "https://sospodencoscanaria.com"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "appointment"
+            },
+            "tuesday": {
+                "type": "appointment"
+            },
+            "wednesday": {
+                "type": "appointment"
+            },
+            "thursday": {
+                "type": "appointment"
+            },
+            "friday": {
+                "type": "appointment"
+            },
+            "saturday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "sunday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "12:00"
+            }
+        },
+        "donationInfo": {
+            "paypal": "sosp@paypal.me",
+            "bankAccount": "ES20 5555 4444 3333 2222 1111"
+        },
+        "legalInfo": {
+            "taxId": "G99000003",
+            "legalName": "Asociación de Amigos del Podenco",
+            "foundationDate": "2015-11-01"
+        },
+        "supportedSpecies": [
+            "perros"
+        ],
+        "capacity": 120,
+        "currentOccupancy": 115,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Seguimiento riguroso durante 2 años. Espacios seguros y amplios requeridos.",
+        "isActive": true,
+        "isVerified": false,
+        "isEmergency": true,
+        "likesCount": 45
+    },
+    {
+        "name": "Santuario Ark Canaria",
+        "description": "Santuario para animales de granja y animales domésticos con discapacidades físicas. Un lugar donde la vida se respeta por encima de la utilidad.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928112233",
+        "email": "hola@arkcanaria.org",
+        "managerName": "Pedro Luis Guerra",
+        "socialLinks": {
+            "instagram": "https://instagram.com/ark_canaria",
+            "facebook": "https://facebook.com/arkcanaria"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "16:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "16:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "16:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "16:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "16:00"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "appointment"
+            }
+        },
+        "donationInfo": {
+            "bankAccount": "ES10 0101 0202 0303 0404 0505",
+            "wishlist": "https://amazon.es/wishlist/arkcanaria"
+        },
+        "legalInfo": {
+            "taxId": "G99000004",
+            "legalName": "Fundación Ética Animal Canaria",
+            "foundationDate": "2020-01-10"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos",
+            "otros"
+        ],
+        "capacity": 50,
+        "currentOccupancy": 48,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Principalmente apadrinamiento debido a la condición de salud de los residentes.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 89
+    },
+    {
+        "name": "Protectora de Aves Cielo Azul",
+        "description": "Rescate y rehabilitación de aves exóticas y rapaces heridas. Contamos con voladeros de grandes dimensiones para asegurar el vuelo previo a la liberación.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34633778899",
+        "email": "aves@cieloazul.es",
+        "managerName": "Sofía Ramos",
+        "socialLinks": {
+            "twitter": "https://twitter.com/avescieloazul"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donar@cieloazul.es"
+        },
+        "legalInfo": {
+            "taxId": "G99000005",
+            "legalName": "Asociación Ornitológica Canaria de Rescate",
+            "foundationDate": "2016-09-30"
+        },
+        "supportedSpecies": [
+            "aves"
+        ],
+        "capacity": 200,
+        "currentOccupancy": 60,
+        "hasVeterinaryService": true,
+        "hasTransportService": false,
+        "allowsVolunteers": false,
+        "adoptionPolicy": "Conocimiento previo de la especie y jaulas/aviarios que cumplan normativa de bienestar.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 2
+    },
+    {
+        "name": "Albergue Noble Canino",
+        "description": "Centro integral de acogida. Priorizamos la educación canina para que el perro salga del centro con las mejores herramientas para convivir en un hogar.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928001122",
+        "email": "info@noblecanino.org",
+        "managerName": "Andrés Gil",
+        "socialLinks": {
+            "facebook": "https://facebook.com/noblecanino",
+            "instagram": "https://instagram.com/noblecanino"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "14:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "14:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "14:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "14:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "10:00",
+                "closeTime": "14:00"
+            },
+            "saturday": {
+                "type": "appointment"
+            },
+            "sunday": {
+                "type": "appointment"
+            }
+        },
+        "donationInfo": {
+            "paypal": "tesoreria@noblecanino.org",
+            "bankAccount": "ES60 0000 1111 2222 3333 4444"
+        },
+        "legalInfo": {
+            "taxId": "G99000006",
+            "legalName": "Noble Canino Las Palmas",
+            "foundationDate": "2014-04-04"
+        },
+        "supportedSpecies": [
+            "perros"
+        ],
+        "capacity": 300,
+        "currentOccupancy": 210,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Entrevista con adiestrador del centro y periodo de adaptación de 15 días.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 201
+    },
+    {
+        "name": "Refugio de Conejos Orejas Libres",
+        "description": "Centro especializado en lagomorfos. Rescatamos conejos procedentes de abandonos domésticos y criaderos ilegales.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34611223344",
+        "email": "adopta@orejaslibres.org",
+        "managerName": "Lucía Falcón",
+        "socialLinks": {
+            "instagram": "https://instagram.com/orejaslibres"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "16:00",
+                "closeTime": "20:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "16:00",
+                "closeTime": "20:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "16:00",
+                "closeTime": "20:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "16:00",
+                "closeTime": "20:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "16:00",
+                "closeTime": "20:00"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "conejos@orejaslibres.org",
+            "wishlist": "https://amazon.es/wishlist/conejos-canarias"
+        },
+        "legalInfo": {
+            "taxId": "G99000007",
+            "legalName": "Asociación Orejas Libres",
+            "foundationDate": "2021-08-12"
+        },
+        "supportedSpecies": [
+            "otros"
+        ],
+        "capacity": 40,
+        "currentOccupancy": 35,
+        "hasVeterinaryService": true,
+        "hasTransportService": false,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "No se entregan animales para vivir en jaulas pequeñas; espacio de semilibertad obligatorio.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 33
+    },
+    {
+        "name": "Protectora del Norte Canis",
+        "description": "Operamos en la zona norte de Gran Canaria rescatando animales en situaciones extremas de desnutrición y enfermedad.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928776655",
+        "email": "gestion@canisnorte.org",
+        "managerName": "Roberto Guerra",
+        "socialLinks": {
+            "facebook": "https://facebook.com/canisnorte"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "15:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "15:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "15:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "15:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "15:00"
+            },
+            "saturday": {
+                "type": "appointment"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "bankAccount": "ES30 1122 3344 5566 7788 9900"
+        },
+        "legalInfo": {
+            "taxId": "G99000008",
+            "legalName": "Asociación Protectora Canis Norte",
+            "foundationDate": "2013-02-28"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos"
+        ],
+        "capacity": 100,
+        "currentOccupancy": 95,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Gastos veterinarios de salida a cargo del adoptante como donativo.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": true,
+        "likesCount": 110
+    },
+    {
+        "name": "Refugio Urbano Animalia",
+        "description": "Dedicados a animales pequeños que se encuentran en el entorno urbano de la capital. Especialistas en hámsters y cobayas.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34688111222",
+        "email": "urban@animalia.es",
+        "managerName": "Cristina Valido",
+        "socialLinks": {
+            "instagram": "https://instagram.com/animalia_urbano"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "19:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "19:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "19:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "19:00"
+            },
+            "friday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "19:00"
+            },
+            "saturday": {
+                "type": "open",
+                "openTime": "11:00",
+                "closeTime": "14:00"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "donaciones@animalia.es"
+        },
+        "legalInfo": {
+            "taxId": "G99000009",
+            "legalName": "Pequeños Animales Canaria",
+            "foundationDate": "2023-05-01"
+        },
+        "supportedSpecies": [
+            "otros"
+        ],
+        "capacity": 60,
+        "currentOccupancy": 15,
+        "hasVeterinaryService": false,
+        "hasTransportService": false,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Entrevista telefónica y contrato de responsabilidad.",
+        "isActive": true,
+        "isVerified": false,
+        "isEmergency": false,
+        "likesCount": 7
+    },
+    {
+        "name": "Centro Voz Animal Tafira",
+        "description": "Trabajamos en la educación ciudadana y el rescate de perros de la zona centro de la isla. Nuestra misión es dar voz a los que no la tienen.",
+        "address": "Los Lagares, 6, Tafira Alta",
+        "city": "Las Palmas de Gran Canaria.",
+        "zipCode": "35017",
+        "country": "España",
+        "phone": "+34928123123",
+        "email": "voztafira@animal.org",
+        "managerName": "Ignacio Silva",
+        "socialLinks": {
+            "website": "https://vozanimaltafira.org",
+            "facebook": "https://facebook.com/vozanimal"
+        },
+        "openingHours": {
+            "monday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "tuesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "wednesday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "thursday": {
+                "type": "open",
+                "openTime": "09:00",
+                "closeTime": "14:00"
+            },
+            "friday": {
+                "type": "appointment"
+            },
+            "saturday": {
+                "type": "closed"
+            },
+            "sunday": {
+                "type": "closed"
+            }
+        },
+        "donationInfo": {
+            "paypal": "vozt@paypal.me",
+            "bankAccount": "ES50 4433 2211 0099 8877 6655"
+        },
+        "legalInfo": {
+            "taxId": "G99000010",
+            "legalName": "Asociación Voz Animal Tafira",
+            "foundationDate": "2011-07-07"
+        },
+        "supportedSpecies": [
+            "perros",
+            "gatos"
+        ],
+        "capacity": 100,
+        "currentOccupancy": 55,
+        "hasVeterinaryService": true,
+        "hasTransportService": true,
+        "allowsVolunteers": true,
+        "adoptionPolicy": "Visita obligatoria al centro antes de la adopción. Contrato legal con DNI.",
+        "isActive": true,
+        "isVerified": true,
+        "isEmergency": false,
+        "likesCount": 54
+    }
+]

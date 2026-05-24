@@ -16,13 +16,13 @@ import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { AdoptionCentersService } from './adoption-centers.service';
 import { CreateAdoptionCenterDto } from './dto/create-adoption-center.dto';
 import { UpdateAdoptionCenterDto } from './dto/update-adoption-center.dto';
-import { PaginationDto } from 'src/common/dtos/pagination.dto';
 
 import { Auth } from 'src/users/auth/decorators/auth.decorator';
 import { GetUser } from 'src/users/auth/decorators/get-user.decorator';
 import { ValidRoles } from 'src/users/auth/interfaces/valid-roles.interface';
 import { User } from 'src/users/entities/user.entity'; 
 import { ImageType } from './entities/adoption-center-images.entity';
+import { PaginationDto } from 'src/common/dtos/pagination.dto';
 
 @Controller('adoption-centers')
 export class AdoptionCentersController {
@@ -34,7 +34,7 @@ export class AdoptionCentersController {
   }
 
   @Post()
-  @Auth(ValidRoles.shelter, ValidRoles.admin)
+  @Auth(ValidRoles.admin)
   @UseInterceptors(FileFieldsInterceptor([
     { name: 'logo', maxCount: 1 },
     { name: 'featured', maxCount: 1 },
@@ -43,34 +43,31 @@ export class AdoptionCentersController {
     limits: { fileSize: 1024 * 1024 * 6 },
     fileFilter: (req, file, callback) => {
       if (!file.originalname.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
-        return callback(new BadRequestException('Solo se permiten imágenes (jpg, png, webp, gif)'), false);
+        return callback(new BadRequestException('Solo se permiten imágenes'), false);
       }
       callback(null, true);
     }
   }))
   async create(
-    @Body('data') data: string, 
     @UploadedFiles() files: { 
       logo?: Express.Multer.File[], 
       featured?: Express.Multer.File[], 
       gallery?: Express.Multer.File[] 
     },
-    @GetUser() user: User
+    @Body('data') data: string,
+    @GetUser() user: User,
   ) {
-    if (!data) throw new BadRequestException('Faltan los datos del centro en el campo "data"');
-
-    let createAdoptionCenterDto: CreateAdoptionCenterDto;
+    let createDto: CreateAdoptionCenterDto;
     try {
-      createAdoptionCenterDto = JSON.parse(data);
+      createDto = JSON.parse(data);
     } catch (error) {
       throw new BadRequestException('El formato del campo "data" no es un JSON válido');
     }
-
-    return this.adoptionCentersService.create(createAdoptionCenterDto, user, files);
+    return this.adoptionCentersService.create(createDto, user, files);
   }
 
   @Patch(':id')
-  @Auth(ValidRoles.shelter, ValidRoles.admin)
+  @Auth(ValidRoles.admin)
   @UseInterceptors(FileFieldsInterceptor([
     { name: 'logo', maxCount: 1 },
     { name: 'featured', maxCount: 1 },
@@ -86,7 +83,7 @@ export class AdoptionCentersController {
   }))
   async update(
     @Param('id', ParseUUIDPipe) id: string, 
-    @Body('data') data: string, // Cambiado para recibir JSON como string en multipart/form-data
+    @Body('data') data: string, 
     @UploadedFiles() files: { 
       logo?: Express.Multer.File[], 
       featured?: Express.Multer.File[], 
@@ -94,8 +91,7 @@ export class AdoptionCentersController {
     },
     @GetUser() user: User
   ) {
-    let updateDto: UpdateAdoptionCenterDto = {};
-    
+    let updateDto: any = {}; 
     if (data) {
       try {
         updateDto = JSON.parse(data);
@@ -103,14 +99,20 @@ export class AdoptionCentersController {
         throw new BadRequestException('El formato del campo "data" no es un JSON válido');
       }
     }
-
     return this.adoptionCentersService.update(id, updateDto, user, files);
   }
 
+  @Delete(':id')
+  @Auth(ValidRoles.admin)
+  async remove(@Param('id', ParseUUIDPipe) id: string) {
+    return await this.adoptionCentersService.remove(id);
+  }
+
   @Post('upload-image')
-  @Auth(ValidRoles.shelter, ValidRoles.admin)
-  @UseInterceptors(FileFieldsInterceptor([{ name: 'file', maxCount: 10 }], {
-    limits: { fileSize: 1024 * 1024 * 6 },
+  @Auth(ValidRoles.admin)
+  @UseInterceptors(FileFieldsInterceptor([
+    { name: 'file', maxCount: 10 },
+  ], {
     fileFilter: (req, file, callback) => {
       if (!file.originalname.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
         return callback(new BadRequestException('Solo se permiten imágenes'), false);
@@ -139,26 +141,17 @@ export class AdoptionCentersController {
 
   @Get()
   findAll(@Query() paginationDto: PaginationDto) {
-    return this.adoptionCentersService.findAll(paginationDto);
+    return this.adoptionCentersService.findAll(paginationDto, false);
   }
 
-  @Get('admin/all')
-  @Auth(ValidRoles.admin) 
+  @Get('admin')
+  // @Auth(ValidRoles.admin) 
   findAllForAdmin(@Query() paginationDto: PaginationDto) {
-    return this.adoptionCentersService.findAllAdmin(paginationDto); 
+    return this.adoptionCentersService.findAll(paginationDto, true); 
   }
 
   @Get(':term')
   findOne(@Param('term') term: string) {
     return this.adoptionCentersService.findOnePlain(term);
-  }
-
-  @Delete(':id')
-  @Auth(ValidRoles.shelter, ValidRoles.admin) 
-  remove(
-    @Param('id', ParseUUIDPipe) id: string,
-    @GetUser() user: User
-  ) {
-    return this.adoptionCentersService.remove(id, user);
   }
 }

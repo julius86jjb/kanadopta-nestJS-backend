@@ -1,6 +1,9 @@
 export interface SocialLinks {
-  facebook?:  string;
+  facebook?: string;
   instagram?: string;
-  twitter?:   string;
-  website?:   string;
+  twitter?: string;
+  website?: string;
+  tiktok?: string;
+  youtube?: string;
+  linkedin?: string;
 }
